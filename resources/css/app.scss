@@ -1,0 +1,27 @@
+:root {
+    --color-primary: #6D6AB1;
+    --color-primary-light: #ABA9E0;
+    --color-primary-dark: #44436F;
+    --color-bg-primary: #131012;
+    --color-bg-secondary: #262425;
+    --color-bg-container: #1f1c1d;
+    --color-white: #EDF2F7;
+    --color-placeholder: #504B4D;
+
+    --color-button-red: #801919;
+    --color-button-red-button: #541010;
+    --color-button-red-hover: #A61F1F;
+
+    --color-button-green: #49753F;
+    --color-button-green-hover: #60B34D;
+}
+
+body {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-white);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+}
+
+@import 'card';

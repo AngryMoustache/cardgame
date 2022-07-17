@@ -1,0 +1,114 @@
+.card {
+    position: relative;
+    width: 500px;
+    aspect-ratio: 5/7;
+    border-radius: 3%;
+    overflow: hidden;
+
+    &-overlay,
+    &-image {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        z-index: 1;
+    }
+
+    &-image {
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-data {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        z-index: 2;
+
+        span {
+            display: inline-block;
+            color: black;
+        }
+
+        & > div {
+            position: absolute;
+            // background: rgba(255, 150, 0, .5);
+        }
+
+        &-cost {
+            top: 4.2%;
+            left: 3.7%;
+            width: 15%;
+            font-weight: bolder;
+            text-align: center;
+
+            span { font-size: 4rem; }
+        }
+
+        &-name {
+            top: 6.4%;
+            left: 20.5%;
+            width: 73%;
+            font-weight: bolder;
+
+            span { font-size: 2rem; }
+        }
+
+        &-rarity {
+            display: flex;
+            bottom: 36.8%;
+            left: 7%;
+            width: 86%;
+            font-weight: bolder;
+            justify-content: space-between;
+
+            span {
+                width: auto;
+                font-size: 1rem;
+            }
+        }
+
+        &-power {
+            bottom: 3.3%;
+            left: 4.5%;
+            width: 29%;
+            font-weight: bolder;
+            text-align: center;
+
+            span { font-size: 3rem; }
+        }
+
+        &-text {
+            bottom: 13%;
+            left: 9%;
+            width: 83%;
+            height: 155px;
+            overflow-y: auto;
+            font-family: 'Open Sans', sans-serif;
+
+            span { font-size: 1rem; }
+
+            &::-webkit-scrollbar { width: 5px; }
+            &::-webkit-scrollbar-track { background: #f1f1f1; }
+            &::-webkit-scrollbar-thumb { background: #888; }
+            &::-webkit-scrollbar-thumb:hover { background: #555; }
+        }
+    }
+
+    &.rarity-extraordinary,
+    &.rarity-fabulous {
+        .card-data {
+            &-rarity {
+                bottom: 5.85%;
+                left: 36.5%;
+                width: 56.5%;
+            }
+
+            &-text {
+                height: auto;
+                max-height: 155px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            }
+        }
+    }
+}
