@@ -40,6 +40,7 @@ class CardDataField extends FormField
                 SelectField::make('rarity')
                     ->nullable()
                     ->options(Rarity::list()),
+                TextField::make('masked_text'),
             ]),
         };
     }

@@ -9,6 +9,7 @@ use AngryMoustache\Rambo\Fields\TextField;
 use AngryMoustache\Rambo\Resource;
 use App\Enums\CardType;
 use App\Rambo\Fields\CardDataField;
+use App\Rambo\Fields\CardEffectsField;
 
 class Card extends Resource
 {
@@ -30,6 +31,9 @@ class Card extends Resource
 
             CardDataField::make('data')
                 ->hideFrom('index'),
+
+            CardEffectsField::make('effects')
+                ->hideFrom(['index', 'show']),
         ];
     }
 }

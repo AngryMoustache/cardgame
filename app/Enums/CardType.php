@@ -13,9 +13,9 @@ class CardType
     {
         return [
             self::DUDE => 'Dude',
-            self::RUSE => 'Ruse',
-            self::FIELD => 'Field',
-            self::HERO => 'Hero',
+            // self::RUSE => 'Ruse',
+            // self::FIELD => 'Field',
+            // self::HERO => 'Hero',
         ];
     }
 

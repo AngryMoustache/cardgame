@@ -15,13 +15,14 @@
         <div class="card-data">
             <div class="card-data-cost"><span>{{ $card->data['cost'] }}</span></div>
             <div class="card-data-name"><span>{{ $card->name }}</span></div>
-            {{-- IMAGE --}}
+
             <div class="card-data-rarity">
                 <span>{{ $card->data['tags'] }}</span>
                 <span>{{ App\Enums\Rarity::get($card->data['rarity']) }}</span>
             </div>
+
             <div class="card-data-power"><span>{{ $card->data['power'] }}</span></div>
-            <div class="card-data-text"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="card-data-text"><span>{{ $card->text }}</span></div>
         </div>
     </div>
 </div>

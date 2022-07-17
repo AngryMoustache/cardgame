@@ -1,6 +1,6 @@
 <div>
     <div class="crud-form-field">
-        <label class="crud-form-field-label" for="data">
+        <label class="crud-form-field-label">
             Card data
         </label>
 

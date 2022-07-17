@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use AngryMoustache\Media\Models\Attachment;
+use App\CardText;
 use Illuminate\Database\Eloquent\Model;
 
 class Card extends Model
@@ -11,16 +12,23 @@ class Card extends Model
         'name',
         'type',
         'data',
+        'effects',
         'image_id',
     ];
 
     public $casts = [
         'data' => 'json',
+        'effects' => 'json',
     ];
 
     public function image()
     {
         return $this->belongsTo(Attachment::class);
+    }
+
+    public function getTextAttribute()
+    {
+        return $this->data['masked_text'] ?? CardText::parse($this->effects);
     }
 
     public static function boot()
